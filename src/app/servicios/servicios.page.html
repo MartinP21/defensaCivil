@@ -13,4 +13,9 @@
       <ion-title size="large">servicios</ion-title>
     </ion-toolbar>
   </ion-header>
+  <div *ngFor="let servicio of servicios">
+    <h2>{{ servicio.nombre }}</h2>
+    <p>{{ servicio.descripcion }}</p>
+    <img [src]="servicio.foto" alt="{{ servicio.nombre }}">
+  </div>
 </ion-content>

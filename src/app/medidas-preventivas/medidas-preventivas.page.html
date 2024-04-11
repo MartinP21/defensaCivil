@@ -12,5 +12,16 @@
     <ion-toolbar>
       <ion-title size="large">medidasPreventivas</ion-title>
     </ion-toolbar>
-  </ion-header>
+    <ion-list>
+      <ion-item *ngFor="let medida of medidasPreventivas">
+        <ion-thumbnail slot="start">
+          <img [src]="medida.foto">
+        </ion-thumbnail>
+        <ion-label>
+          <h2>{{ medida.titulo }}</h2>
+          <p>{{ medida.descripcion }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list></ion-header>
+
 </ion-content>

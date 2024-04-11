@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
+import { AlberguesService } from 'src/app/albergues/albergues.service';
 
 @Component({
   selector: 'app-albergues',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlberguesPage implements OnInit {
 
-  constructor() { }
+  albergues: any[] = [];
+  filteredAlbergues: any[] = [];
+  searchTerm: string = '';
+
+  constructor(private navCtrl: NavController, private alberguesService: AlberguesService) { }
 
   ngOnInit() {
+    this.getAlbergues();
   }
 
+  getAlbergues() {
+    this.alberguesService.getAlbergues().subscribe(data => {
+      this.albergues = data.datos;
+    });
+  }
 }

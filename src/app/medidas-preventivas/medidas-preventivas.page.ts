@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MedidasService } from 'src/app/medidas-preventivas/medidas.service';
 
 @Component({
   selector: 'app-medidas-preventivas',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MedidasPreventivasPage implements OnInit {
 
-  constructor() { }
+  medidasPreventivas: any[] = [];
+
+  constructor(private medidasService: MedidasService) { }
 
   ngOnInit() {
+    this.getMedidasPreventivas();
   }
 
+  getMedidasPreventivas() {
+    this.medidasService.getMedidasPreventivas().subscribe(data => {
+      this.medidasPreventivas = data.datos;
+    });
+  }
 }

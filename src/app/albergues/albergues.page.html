@@ -13,4 +13,20 @@
       <ion-title size="large">albergues</ion-title>
     </ion-toolbar>
   </ion-header>
+  
+  <ion-list>
+    <ion-item *ngFor="let albergue of albergues" (click)="albergue.expanded = !albergue.expanded">
+      <ion-label>{{ albergue.edificio }}</ion-label>
+      <ion-icon [name]="albergue.expanded ? 'chevron-up' : 'chevron-down'"></ion-icon>
+      <ion-list *ngIf="albergue.expanded">
+        <summary>
+          <p>Ciudad: {{ albergue.ciudad }}</p>
+          <p>Código: {{ albergue.codigo }}</p>
+          <p>Coordinador: {{ albergue.coordinador }}</p>
+          <p>Teléfono: {{ albergue.telefono }}</p>
+          <p>Capacidad: {{ albergue.capacidad }}</p>
+        </summary>
+      </ion-list>
+    </ion-item>
+  </ion-list>
 </ion-content>

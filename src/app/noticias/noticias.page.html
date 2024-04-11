@@ -13,4 +13,15 @@
       <ion-title size="large">noticias</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-list>
+    <ion-item *ngFor="let noticia of noticias">
+      <ion-thumbnail slot="start">
+        <img [src]="noticia.foto">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ noticia.titulo }}</h2>
+        <p>{{ noticia.contenido }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
