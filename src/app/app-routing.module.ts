@@ -59,6 +59,19 @@ const routes: Routes = [
     path: 'inicio',
     loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
   },
+  {
+    path: 'noticias-especificas',
+    loadChildren: () => import('./noticias-especificas/noticias-especificas.module').then( m => m.NoticiasEspecificasPageModule)
+  },  {
+    path: 'situacion',
+    loadChildren: () => import('./situacion/situacion.module').then( m => m.SituacionPageModule)
+  },
+  {
+    path: 'mis-situaciones',
+    loadChildren: () => import('./mis-situaciones/mis-situaciones.module').then( m => m.MisSituacionesPageModule)
+  },
+
+
 ];
 
 @NgModule({

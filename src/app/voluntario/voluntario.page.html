@@ -3,14 +3,42 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>voluntario</ion-title>
+    <ion-title>Voluntario</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">voluntario</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-item>
+    <ion-label position="floating">Cédula</ion-label>
+    <ion-input type="text" [(ngModel)]="cedula"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input type="text" [(ngModel)]="nombre"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Apellido</ion-label>
+    <ion-input type="text" [(ngModel)]="apellido"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Clave</ion-label>
+    <ion-input type="password" [(ngModel)]="clave"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Correo</ion-label>
+    <ion-input type="email" [(ngModel)]="correo"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Teléfono</ion-label>
+    <ion-input type="tel" [(ngModel)]="telefono"></ion-input>
+  </ion-item>
+
+  <!-- Agrega más campos del formulario según sea necesario -->
+
+  <ion-button expand="full" (click)="registrar()">Registrarse</ion-button>
 </ion-content>
