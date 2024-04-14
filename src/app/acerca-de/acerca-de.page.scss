@@ -1,0 +1,41 @@
+.informacion-contacto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+  }
+  
+
+    .foto-personal {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%; /* Hacer la imagen redondeada */
+        margin-right: 20px;
+      }
+
+  
+  .informacion-contacto p {
+    flex: 1;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+  
+  .informacion-contacto strong {
+    color: #333;
+  }
+  
+  .informacion-contacto img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+  
+  /* Estilos para la tarjeta de información */
+  .informacion-contacto {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  

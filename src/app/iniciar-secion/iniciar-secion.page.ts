@@ -31,7 +31,7 @@ export class IniciarSecionPage {
       console.log(data);
       if (data.exito) {
         localStorage.setItem('token', data.token); // Almacena el token en el almacenamiento local
-        this.router.navigate(['/mis-situaciones']);
+        this.router.navigate(['/situacion']);
       }
     }, (error) => {
       console.error('Error al iniciar sesión:', error);

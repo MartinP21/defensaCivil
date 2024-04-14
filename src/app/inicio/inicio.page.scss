@@ -1,0 +1,18 @@
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease; /* Agrega transición suave para el desplazamiento */
+  }
+  
+  ion-card {
+    flex: 0 0 auto; /* Para que las tarjetas mantengan su tamaño original */
+    margin-right: 10px; /* Espacio entre tarjetas */
+    width: 40%;
+  }
+.texto{
+    width: 90%;
+}
