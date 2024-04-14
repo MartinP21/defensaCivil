@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>situacion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">situacion</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Enviar Nueva Situación</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Título</ion-label>
+        <ion-input type="text" [(ngModel)]="titulo"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Descripción</ion-label>
+        <ion-textarea [(ngModel)]="descripcion"></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">URL de la foto</ion-label>
+        <ion-input type="text" [(ngModel)]="foto"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Latitud</ion-label>
+        <ion-input type="number" [(ngModel)]="latitud"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Longitud</ion-label>
+        <ion-input type="number" [(ngModel)]="longitud"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" color="primary" (click)="enviarSituacion()">Enviar</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
